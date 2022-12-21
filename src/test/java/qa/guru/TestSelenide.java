@@ -15,5 +15,7 @@ public class TestSelenide extends TestBase {
         $("#wiki-tab").click();
         $(".js-wiki-more-pages-link").click();
         $("#wiki-pages-box").shouldHave(text("SoftAssertions"));
+        $("#wiki-pages-box").find(byText("SoftAssertions")).click();
+        $(".markdown-body").shouldHave(text("Using JUnit5 extend test class:"));
     }
 }
